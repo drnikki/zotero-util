@@ -7,7 +7,7 @@ So, the code as written looks for everything your library with a certain tag (fo
 
 1. A library that uses tags (or other grouping mechanism to identify candidate items)
 2. A library that attaches annotations to the item in Zotero
-3. A library that tags those items with a special tag (I'm calling it _annotation_) and that makes sure that that tag is applied _only_ to attatchments and never to top-level items.
+3. A library that tags those items with a special tag (I'm calling it _annotation_) and that makes sure that that tag is applied _only_ to attachments and never to top-level items.
 4. A terminal to run python scripts
 
 # Alternative approaches (aka, too much background information)
@@ -32,7 +32,7 @@ There are other-language version implementations of a zotero API.  I chose pyzot
 4. Login to Zotero and find two things: your API key and your library ID.  Both pieces of data will be available under Settings > Feeds/API.
 ![](imgs/Zotero___Settings___Feeds_API.png)
 
-5. Update the file with your API information and your filtering criteria.  Around line 28 I'm searching for all items tagged `592-ethics`, so you'll neeed to use a tag that works for you.  The line to update reads: `items = zot.items(sort='creator',direction='asc',tag='592-ethics')
+5. Update the file with your API information and your filtering criteria.  Around line 28 I'm searching for all items tagged `592-ethics`, so you'll need to use a tag that works for you.  The line to update reads: `items = zot.items(sort='creator',direction='asc',tag='592-ethics')
 `
 
 6. In terminal, run `python ./annotated-2.py > bibliography.html`
@@ -44,3 +44,4 @@ There are other-language version implementations of a zotero API.  I chose pyzot
 # Why isn't it done X way? / You should do Y:
 - I thought about using the zotero.children() function, but that will return all children of an item, and so you'll still need a tagged way to determine which child item to include and display.  
 - I thought about caching or iterating a different way to make fewer API calls.  Pull requests to do that are totally welcome.  I want to be respectful of the Zotero API.
+

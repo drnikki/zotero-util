@@ -1,6 +1,6 @@
 # What's this?!
 
-This is a script I wrote a script that:
+This is a script I wrote that:
 1. finds all of the notes attached to items in Zotero
 2. finds out the title of the item that note belongs to
 3. stores that note as it's own [Markdown](https://en.wikipedia.org/wiki/Markdown) file, named after the item title.
